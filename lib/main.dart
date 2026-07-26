@@ -11,7 +11,10 @@ class Sirat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
+      theme: ThemeData(scaffoldBackgroundColor: const Color.fromARGB(245, 245, 245, 245)
+      ,appBarTheme: AppBarThemeData(
+        backgroundColor: const Color.fromARGB(245, 245, 245, 245)
+      )),
       home: Root(),
     );
   }

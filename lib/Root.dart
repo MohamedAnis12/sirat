@@ -73,7 +73,7 @@ class _RootState extends State<Root> {
                 label: "Azkar",
               ),
               BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.location_north),
+                icon: Icon(CupertinoIcons.compass),
                 label: "Qibla",
               ),
             ],
