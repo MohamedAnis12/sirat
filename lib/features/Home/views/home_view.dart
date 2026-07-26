@@ -2,11 +2,31 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sirat/core/constants/appcolors.dart';
+import 'package:sirat/features/Home/models/quick_access_model.dart';
 import 'package:sirat/features/Home/views/widgets/custom_pray_time_container.dart';
+import 'package:sirat/features/Home/views/widgets/custom_quick_access_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
+  static List<QuickAccessModel> modelList = [
+    QuickAccessModel(icon: CupertinoIcons.book, title: 'Quran', onTap: () {}),
+    QuickAccessModel(
+      icon: CupertinoIcons.checkmark_alt,
+      title: 'Azkar',
+      onTap: () {},
+    ),
+    QuickAccessModel(
+      icon: CupertinoIcons.sparkles,
+      title: 'Hadith',
+      onTap: () {},
+    ),
+    QuickAccessModel(
+      icon: CupertinoIcons.compass,
+      title: 'Qibla',
+      onTap: () {},
+    ),
+    QuickAccessModel(icon: CupertinoIcons.time, title: 'Prayers', onTap: () {}),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,48 +63,8 @@ class HomeView extends StatelessWidget {
                   childAspectRatio: 1.3,
                 ),
                 itemBuilder: (context, index) {
-                  return CustomQuickAccessCart();
+                  return CustomQuickAccessCard(model: modelList[index]);
                 },
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class CustomQuickAccessCart extends StatelessWidget {
-  const CustomQuickAccessCart({super.key, this.onTap});
-final void Function()? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap:onTap ,
-      child: Container(
-        width: 150,
-        height: 75,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-              Container(
-                width: 56,
-                height: 56,
-                decoration: BoxDecoration(
-                color: Colors.green.shade100,
-                  borderRadius: BorderRadius.circular(200)),
-                child: Icon(CupertinoIcons.book, color: AppColors.mainColor,size: 32,),
-              ),
-              Text(
-                "Quran",
-                style: TextStyle(color: AppColors.mainColor, fontSize: 32),
               ),
             ],
           ),
