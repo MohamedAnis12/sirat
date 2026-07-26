@@ -57,6 +57,7 @@ class HomeView extends StatelessWidget {
 class CustomQuickAccessCart extends StatelessWidget {
   const CustomQuickAccessCart({super.key, this.onTap});
 final void Function()? onTap;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
