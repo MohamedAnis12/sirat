@@ -5,11 +5,20 @@ import 'package:sirat/core/constants/appcolors.dart';
 import 'package:sirat/features/Home/models/quick_access_model.dart';
 import 'package:sirat/features/Home/views/widgets/custom_pray_time_container.dart';
 import 'package:sirat/features/Home/views/widgets/custom_quick_access_card.dart';
-
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
   static List<QuickAccessModel> modelList = [
-    QuickAccessModel(icon: CupertinoIcons.book, title: 'Quran', onTap: () {}),
+    QuickAccessModel(
+      icon: CupertinoIcons.book,
+      title: 'Ar Quran',
+      onTap: () {},
+    ),
+    QuickAccessModel(
+      icon:Icons.translate,
+      title: 'Eng Quran',
+      onTap: () {},
+    ),
+
     QuickAccessModel(
       icon: CupertinoIcons.checkmark_alt,
       title: 'Azkar',
@@ -54,7 +63,7 @@ class HomeView extends StatelessWidget {
               GridView.builder(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
-                itemCount: 5,
+                itemCount: modelList.length,
 
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
