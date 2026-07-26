@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:sirat/core/constants/appcolors.dart';
 import 'package:sirat/features/Quran/widgets/CustomQuranCard.dart';
 
-class QuranView extends StatelessWidget {
-  const QuranView({super.key});
+class QuranArAndEnView extends StatelessWidget {
+  const QuranArAndEnView({super.key});
 
   @override
   Widget build(BuildContext context) {

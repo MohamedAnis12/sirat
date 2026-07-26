@@ -4,7 +4,7 @@ import 'package:sirat/core/constants/appcolors.dart';
 import 'package:sirat/features/Azkar/views/azkar_view.dart';
 import 'package:sirat/features/Home/views/home_view.dart';
 import 'package:sirat/features/Qibla/views/qibla_view.dart';
-import 'package:sirat/features/Quran/views/quran_view.dart';
+import 'package:sirat/features/Quran/views/select_sura_view.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -14,7 +14,7 @@ class Root extends StatefulWidget {
 }
 
 class _RootState extends State<Root> {
-  List<Widget> pages = [HomeView(), QuranView(), AzkarView(),QiblaView()];
+  List<Widget> pages = [HomeView(), SelectSuraView(), AzkarView(),QiblaView()];
   PageController controller = PageController();
   int currentPage = 0;
 
